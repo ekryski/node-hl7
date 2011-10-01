@@ -24,12 +24,15 @@ var server = net.createServer(function(stream) {
   });
   stream.addListener("data", function(data) {
     if(data && !data.match(/^\s*$/)) {
+      //send a fake accept ack to my perl llp sender over the socket
       stream.write("...AA");
       var from_xml = hl7.to_xml(data);
       var parser = new xml.Parser();
 
       parser.on('end', function(result) {
-        sys.puts(result["PID"]["PID.3"]["PID.3.1"]);
+        //result is now an object formed from xml2js
+        //on 'end' called from successful parser.parseString()
+        sys.puts("MRN From message: "+result["PID"]["PID.3"]["PID.3.1"]);
       });
 
       parser.parseString(from_xml);
