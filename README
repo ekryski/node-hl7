@@ -1,0 +1,7 @@
+This is a very basic HL7 receiver in pure Node.js as proof of concept
+It: 
+  1 - receives an HL7 message on port 1337
+  2 - sends back an Accept ack (fake very limited ack that I made up)
+  3 - transforms the hl7 to xml (using my very ugly lib/hl7_to_xml.js file)
+  4 - turns that xml into an object
+  5 - prints out what should be the MRN (PID.3.1)
