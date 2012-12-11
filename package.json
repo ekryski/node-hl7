@@ -1,0 +1,32 @@
+{
+  "name": "node-hl7",
+  "private": true,
+  "description": "Basic NodeJS HL7 server",
+  "version": "0.0.1",
+  "author": {
+    "name": "Eric Kryski",
+    "email": "e.kryski@gmail.com"
+  },
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ekryski/node-hl7.git"
+  },
+  "engines": {
+    "node": ">0.6.13"
+  },
+  "main": "hl7-server.js",
+  "dependencies": {
+    "xml2js": "~0.2.2",
+    "socket.io": "~0.9.11"
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "mocha": "*",
+    "grunt-mocha": "*"
+  },
+  "scripts": {
+    "start": "node example.js",
+    "test": "grunt test"
+  }
+}
