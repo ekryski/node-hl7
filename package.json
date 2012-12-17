@@ -17,7 +17,9 @@
   "main": "lib/hl7.js",
   "dependencies": {
     "xml2js": "~0.2.2",
-    "socket.io": "~0.9.11"
+    "socket.io": "~0.9.11",
+    "xmlbuilder": "~0.4.2",
+    "chai": "~1.4.0"
   },
   "devDependencies": {
     "grunt": "*",
