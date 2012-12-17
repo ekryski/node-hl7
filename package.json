@@ -1,6 +1,5 @@
 {
   "name": "node-hl7",
-  "private": true,
   "description": "Basic NodeJS HL7 server",
   "version": "0.0.1",
   "author": {
@@ -15,7 +14,7 @@
   "engines": {
     "node": ">0.6.13"
   },
-  "main": "hl7-server.js",
+  "main": "lib/hl7.js",
   "dependencies": {
     "xml2js": "~0.2.2",
     "socket.io": "~0.9.11"

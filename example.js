@@ -6,16 +6,16 @@
 */
 
 var socketio = require('socket.io'),
-    hl7Server = require("./lib/hl7-server.js");
+    hl7 = require("./lib/hl7.js");
 
-var server = new hl7Server();
+var hl7Server = new hl7.Server();
 
 var port = 5000;
 
 function onSocketConnect(socket) {
     console.log("Socket.io Client Connected");
 
-    server.on('hl7', function(msg){
+    hl7Server.on('hl7', function(msg){
       socket.emit('hl7', msg);
     });
 
@@ -38,7 +38,3 @@ io.set("transports", [
     "jsonp-polling"
 ]);
 io.sockets.on("connection", onSocketConnect);
-
-server.on('hl7', function(msg){
-  console.log(msg);
-});
