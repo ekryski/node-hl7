@@ -1,7 +1,7 @@
 {
   "name": "node-hl7",
   "description": "Basic NodeJS HL7 server",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": {
     "name": "Eric Kryski",
     "email": "e.kryski@gmail.com"
